@@ -1,0 +1,56 @@
+# heros API
+
+###
+# baseURL
+@baseURL = http://localhost:3000
+
+###
+# Find All Heros
+GET {{baseURL}}/heros
+
+###
+# Find All Heros With Teams
+GET {{baseURL}}/heros/detail
+
+###
+# Find Hero By Id
+GET {{baseURL}}/heros/9ac6f290-c907-484e-af2e-5657cd79b8c8
+
+###
+# Find Hero By Id With Teams
+GET {{baseURL}}/heros/261b8ad5-b764-4eef-9078-e456b5c04075/detail
+
+###
+# Add Hero
+POST {{baseURL}}/heros
+Content-Type: application/json
+
+{
+    "name": "newGoodHero2",
+	"alignment": "GOOD"
+}
+
+###
+# Edit Hero By Id
+PUT {{baseURL}}/heros/9ac6f290-c907-484e-af2e-5657cd79b8c8
+Content-Type: application/json
+
+{
+    "name": "newGoodHeroEdit",
+	"alignment": "BAD"
+}
+
+###
+# Del Hero By Id
+DELETE {{baseURL}}/heros/41f6ecfa-a2f8-4000-9267-5926cd311ee8
+
+###
+# Remove Team from Hero
+DELETE {{baseURL}}/heros/fa597d89-4fb8-4271-bc79-48b372563668/team/5d6758f4-348b-4909-93a4-42ae3e7f699d
+
+###
+# Add Team To Hero
+POST {{baseURL}}/heros/261b8ad5-b764-4eef-9078-e456b5c04075/team/95644c30-9f14-4901-aea5-60b6d2c1d2d7
+Content-Type: application/json
+
+{}

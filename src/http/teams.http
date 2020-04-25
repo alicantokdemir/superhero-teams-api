@@ -1,0 +1,58 @@
+# teams API
+
+###
+# baseURL
+@baseURL = http://localhost:3000
+
+###
+# Find All Teams
+GET {{baseURL}}/teams
+
+###
+# Find All Teams With Heros
+GET {{baseURL}}/teams/detail
+
+###
+# Find Team By Id
+GET {{baseURL}}/teams/1
+
+###
+# Find Team By Id With Heros
+GET {{baseURL}}/teams/95644c30-9f14-4901-aea5-60b6d2c1d2d7/detail
+
+###
+# Add Team
+POST {{baseURL}}/teams
+Content-Type: application/json
+
+{
+    "name": "newTeam"
+}
+
+###
+# Edit Team By Id
+PUT {{baseURL}}/teams/1
+Content-Type: application/json
+
+{
+    "name": "newTeamEdit"
+}
+
+###
+# Del Team By Id
+DELETE {{baseURL}}/teams/f79bb514-68df-43cb-974b-05d778a01a5d
+
+###
+# Remove Hero from Team
+DELETE {{baseURL}}/teams/f79bb514-68df-43cb-974b-05d778a01a5d/hero/41f6ecfa-a2f8-4000-9267-5926cd311ee8
+
+###
+# Add Hero to Team
+POST {{baseURL}}/teams/f79bb514-68df-43cb-974b-05d778a01a5d/hero/41f6ecfa-a2f8-4000-9267-5926cd311ee8
+Content-Type: application/json
+
+{}
+
+###
+# Get hero teams
+GET {{baseURL}}/teams/heroteams
