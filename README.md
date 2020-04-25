@@ -1,8 +1,8 @@
-- Install packages
-npm i
+# Install packages
+- npm i
 
-- Run tests
-npm run test
+# Run tests
+- npm run test
 
-- To run
-npm start
+# To run
+- npm start
